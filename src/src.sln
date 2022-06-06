@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{E8927D4D-368D-4DB1-8AD5-B5FEF02C272E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{E7773DE9-08BF-46B9-8CAF-061961EAFE85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Microservice", "Microservices\Customer.Microservice\Customer.Microservice.csproj", "{ADE1452C-D5F3-42FB-8AC5-1A7A0AA7A919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Microservice", "Microservices\Product.Microservice\Product.Microservice.csproj", "{5566B53A-79AE-469E-9A4A-5D34E50EED29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7773DE9-08BF-46B9-8CAF-061961EAFE85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7773DE9-08BF-46B9-8CAF-061961EAFE85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7773DE9-08BF-46B9-8CAF-061961EAFE85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7773DE9-08BF-46B9-8CAF-061961EAFE85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE1452C-D5F3-42FB-8AC5-1A7A0AA7A919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE1452C-D5F3-42FB-8AC5-1A7A0AA7A919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE1452C-D5F3-42FB-8AC5-1A7A0AA7A919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE1452C-D5F3-42FB-8AC5-1A7A0AA7A919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5566B53A-79AE-469E-9A4A-5D34E50EED29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5566B53A-79AE-469E-9A4A-5D34E50EED29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5566B53A-79AE-469E-9A4A-5D34E50EED29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5566B53A-79AE-469E-9A4A-5D34E50EED29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ADE1452C-D5F3-42FB-8AC5-1A7A0AA7A919} = {E8927D4D-368D-4DB1-8AD5-B5FEF02C272E}
+		{5566B53A-79AE-469E-9A4A-5D34E50EED29} = {E8927D4D-368D-4DB1-8AD5-B5FEF02C272E}
+	EndGlobalSection
+EndGlobal
