@@ -16,7 +16,7 @@ public class ConsumerController : MastersController
     }
     
     [HttpGet]
-    public async Task<IActionResult> GetConsumers()
+    public IActionResult GetConsumers()
     {
         /*var consumers = await _songService.GetAll();*/
         return Ok(ApiResponse<object>.Success("Consumer response"));

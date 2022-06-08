@@ -11,5 +11,10 @@ public class ConsumerContext : DbContext
     {
     }
 
-    public DbSet<Consumer> Customers { get; set; }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        //modelBuilder.ApplyConfigurationsFromAssembly(typeof(SongEntityTypeConfiguration).Assembly);
+    }
+
+    public DbSet<Consumer> Consumers { get; set; }
 }

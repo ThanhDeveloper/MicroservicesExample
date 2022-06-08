@@ -7,15 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{E7773DE9-08BF-46B9-8CAF-061961EAFE85}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Customer.Microservice", "Customer.Microservice", "{AD4FC2FD-3701-4C5D-B860-421AABDAF737}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Customer", "Customer", "{AD4FC2FD-3701-4C5D-B860-421AABDAF737}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Domain", "Microservices\Customer\Customer.Domain\Customer.Domain.csproj", "{3C1E4FC5-1981-4321-88FB-AFBA88917B5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Domain", "Microservices\Customer\Customer.Domain\Customer.Domain.csproj", "{3C1E4FC5-1981-4321-88FB-AFBA88917B5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Infrastructure", "Microservices\Customer\Customer.Infrastructure\Customer.Infrastructure.csproj", "{A0A880BC-B5A4-4397-9070-F87A66B4131E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Infrastructure", "Microservices\Customer\Customer.Infrastructure\Customer.Infrastructure.csproj", "{A0A880BC-B5A4-4397-9070-F87A66B4131E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Application", "Microservices\Customer\Customer.Application\Customer.Application.csproj", "{9BB05779-9990-4468-B3AD-830455E63158}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Application", "Microservices\Customer\Customer.Application\Customer.Application.csproj", "{9BB05779-9990-4468-B3AD-830455E63158}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Api", "Microservices\Customer\Customer.Api\Customer.Api.csproj", "{E33E2607-FF70-4043-A5C3-BD5614CA66A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Api", "Microservices\Customer\Customer.Api\Customer.Api.csproj", "{E33E2607-FF70-4043-A5C3-BD5614CA66A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
