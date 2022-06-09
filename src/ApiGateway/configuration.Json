@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/customers",
+      "DownstreamPathTemplate": "/api/consumers",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 44301
         }
       ],
-      "UpstreamPathTemplate": "/gateway/customers",
+      "UpstreamPathTemplate": "/gateway/consumers",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
     {
