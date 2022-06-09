@@ -1,5 +1,7 @@
+using System.Diagnostics;
 using AutoMapper;
-using Customer.Api.Dtos;
+using Customer.Application.Contracts.Infrastructure;
+using Customer.Infrastructure.ApiResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Customer.Api.Controllers;
@@ -8,17 +10,17 @@ namespace Customer.Api.Controllers;
 [Route("api/consumers")]
 public class ConsumerController : MastersController
 {
-    private readonly IConfiguration _configuration;
-    public ConsumerController(IMapper mapper, IConfiguration configuration)
+    private readonly IConsumerService _consumerService;
+    public ConsumerController(IMapper mapper, IConsumerService consumerService)
     {
-        _configuration = configuration;
         Mapper = mapper;
+        _consumerService = consumerService;
     }
     
     [HttpGet]
-    public IActionResult GetConsumers()
+    public async Task<IActionResult> GetConsumers()
     {
-        /*var consumers = await _songService.GetAll();*/
-        return Ok(ApiResponse<object>.Success("Consumer response"));
+        var consumers = await _consumerService.GetAll();
+        return Ok(ApiResponse<object>.Success(consumers));
     }
 }

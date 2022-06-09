@@ -10,14 +10,14 @@ namespace Customer.Infrastructure
 {
 	public static class InfrastructureServiceRegistration
 	{
-		public static IServiceCollection ConfigCoreServices(this IServiceCollection services, IConfiguration configuration)
+		public static IServiceCollection ConfigInfrastructureCoreServices(this IServiceCollection services, IConfiguration configuration)
 		{
 			services.AddDbContext<ConsumerContext>(options =>
 				options.UseNpgsql(configuration.GetConnectionString("CustomerConnectionString")));
 			
 			services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));                        
 			services.AddScoped<IConsumersRepository, ConsumerRepository>();
-			
+
 			services.Configure<EmailSettings>(c => configuration.GetSection("EmailSettings"));
 
 			return services;

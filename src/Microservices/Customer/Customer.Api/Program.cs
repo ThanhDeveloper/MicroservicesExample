@@ -1,3 +1,4 @@
+using Customer.Api;
 using Customer.Application;
 using Customer.Infrastructure;
 using Customer.Infrastructure.Persistence;
@@ -7,8 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 // General Configurations
-builder.Services.AddApplicationServices();
-builder.Services.ConfigCoreServices(builder.Configuration);
+builder.Services.RegisterCoreServices();
+builder.Services.ConfigApplicationCoreServices();
+builder.Services.ConfigInfrastructureCoreServices(builder.Configuration);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddControllers();
