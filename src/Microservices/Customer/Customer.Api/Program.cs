@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // General Configurations
 builder.Services.AddApplicationServices();
-builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.ConfigCoreServices(builder.Configuration);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddControllers();
