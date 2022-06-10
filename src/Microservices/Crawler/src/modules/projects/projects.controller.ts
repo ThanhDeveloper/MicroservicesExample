@@ -14,7 +14,6 @@ import { TimeoutInterceptor } from '../../core/interceptors/timeout.interceptor'
 import { SkipThrottle } from '@nestjs/throttler';
 import { API_VERSION } from '../../core/constants';
 import { Project } from './schemas/project.schema';
-import { ok } from 'assert';
 
 @SkipThrottle()
 @ApiTags('projects')
@@ -31,6 +30,7 @@ export class ProjectsController {
   @Post('crawler')
   @UseInterceptors(TransformInterceptor, TimeoutInterceptor)
   async crawlerProjects() {
+    await this.projectService.crawlerData();
     return true;
   }
 }
