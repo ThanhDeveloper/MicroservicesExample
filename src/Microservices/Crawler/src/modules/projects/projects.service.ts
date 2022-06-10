@@ -21,13 +21,6 @@ export class ProjectService {
     return this.model.findOne({ _id: id }).exec();
   }
 
-  // async create(createUserDto: RegisterUserDto): Promise<Project> {
-  //   const newUser = this.Mapper.map(createUserDto, Project, RegisterUserDto);
-  //   return await new this.model({
-  //     ...newUser,
-  //   }).save();
-  // }
-
   async crawlerData() {
     await this.model.db.dropCollection('projects');
     const URL = 'https://alonhadat.com.vn/nha-dat/can-ban.html';

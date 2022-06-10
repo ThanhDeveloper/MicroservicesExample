@@ -33,4 +33,10 @@ export class ProjectsController {
     await this.projectService.crawlerData();
     return true;
   }
+
+  @Get(':id')
+  @UseInterceptors(TransformInterceptor, TimeoutInterceptor)
+  async findOne(@Param('id') id: string): Promise<Project> {
+    return this.projectService.findOne(id);
+  }
 }
