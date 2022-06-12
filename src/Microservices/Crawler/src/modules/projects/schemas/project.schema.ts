@@ -12,11 +12,15 @@ export class Project {
 
   @AutoMap()
   @Prop()
+  price: string;
+
+  @AutoMap()
+  @Prop()
   location: string;
 
   @AutoMap()
   @Prop()
-  room_number: string;
+  area: string;
 }
 
 export const ProjectSchema = SchemaFactory.createForClass(Project);
