@@ -3,6 +3,8 @@ using Project.Core.DTOs;
 
 namespace Project.API.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CustomBaseController : ControllerBase
     {
         [NonAction]
