@@ -23,7 +23,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped(typeof(NotFoundFilter<>));
+builder.Services.AddScoped(typeof(NotFoundIdFilter<>));
+builder.Services.AddScoped(typeof(NotFoundUpdateFilter<>));
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
 builder.Services.AddDbContext<DatabaseContext>(x =>

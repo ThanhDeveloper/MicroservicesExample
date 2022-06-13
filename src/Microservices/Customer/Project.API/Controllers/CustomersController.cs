@@ -32,7 +32,7 @@ namespace Project.API.Controllers
         
         // GET api/customers/id
         [HttpGet("{id}")]
-        [ServiceFilter(typeof(NotFoundFilter<Customer>))]
+        [ServiceFilter(typeof(NotFoundIdFilter<Customer>))]
         public async Task<IActionResult> GetById(int id)
         {
             var customer = await _customerService.GetByIdAsync(id);
@@ -51,7 +51,7 @@ namespace Project.API.Controllers
         
         // PUT api/customers
         [HttpPut]
-        [ServiceFilter(typeof(NotFoundFilter<Customer>))]
+        [ServiceFilter(typeof(NotFoundUpdateFilter<Customer>))]
         public async Task<IActionResult> Update(CustomerUpdateDto customerUpdateDto)
         {
             await _customerService.UpdateAsync(_mapper.Map<Customer>(customerUpdateDto));
@@ -60,7 +60,7 @@ namespace Project.API.Controllers
         
         // DELETE api/customers/id
         [HttpDelete("{id}")]
-        [ServiceFilter(typeof(NotFoundFilter<Customer>))]
+        [ServiceFilter(typeof(NotFoundIdFilter<Customer>))]
         public async Task<IActionResult> Remove(int id)
         {
             var product = await _customerService.GetByIdAsync(id);

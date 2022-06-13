@@ -6,12 +6,12 @@ using Project.Core.Services;
 
 namespace Project.API.Filters
 {
-    public class NotFoundFilter<T> : IAsyncActionFilter where T : BaseEntity
+    public class NotFoundIdFilter<T> : IAsyncActionFilter where T : BaseEntity
     {
 
         private readonly IGenericService<T> _service;
 
-        public NotFoundFilter(IGenericService<T> service)
+        public NotFoundIdFilter(IGenericService<T> service)
         {
             _service = service;
         }
