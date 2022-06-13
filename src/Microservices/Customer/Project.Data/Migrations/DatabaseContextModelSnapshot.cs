@@ -10,8 +10,8 @@ using Project.Data;
 
 namespace Project.Data.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(DatabaseContext))]
+    partial class DatabaseContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -31,23 +31,47 @@ namespace Project.Data.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Country")
-                        .HasColumnType("text");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
-                        .HasColumnType("text");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("character varying(11)");
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("phone")
-                        .HasColumnType("text");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Country = "VietNam",
+                            CreatedDate = new DateTime(2022, 6, 13, 3, 10, 41, 660, DateTimeKind.Utc).AddTicks(5490),
+                            Name = "Tam Thanh",
+                            Phone = "69696969"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Country = "VietNam",
+                            CreatedDate = new DateTime(2022, 6, 13, 3, 10, 41, 660, DateTimeKind.Utc).AddTicks(5570),
+                            Name = "Quynh Nhu",
+                            Phone = "1234567"
+                        });
                 });
 #pragma warning restore 612, 618
         }

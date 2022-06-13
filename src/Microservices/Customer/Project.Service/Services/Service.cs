@@ -4,6 +4,8 @@ using Project.Core.Services;
 using Project.Core.UnitOfWorks;
 using Project.Service.Exceptions;
 using System.Linq.Expressions;
+using Microsoft.AspNetCore.Mvc;
+using Project.Core.DTOs;
 
 namespace Project.Service.Services
 {
@@ -42,13 +44,13 @@ namespace Project.Service.Services
 
         public async Task<T> GetByIdAsync(int id)
         {
-            var hasProduct = await _repository.GetByIdAsync(id);
+            var objectData = await _repository.GetByIdAsync(id);
 
-            if (hasProduct == null)
+            if (objectData == null)
             {
-                throw new NotFoundExcepiton($"{typeof(T).Name}({id}) not found");
+                throw new NotFoundExcepiton($"{typeof(T).Name} {id} not found");
             }
-            return hasProduct;
+            return objectData;
         }
 
         public async Task RemoveAsync(T entity)

@@ -22,7 +22,7 @@ namespace Project.API.Modules
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
 
             var apiAssembly = Assembly.GetExecutingAssembly();
-            var repoAssembly = Assembly.GetAssembly(typeof(AppDbContext));
+            var repoAssembly = Assembly.GetAssembly(typeof(DatabaseContext));
             var serviceAssembly = Assembly.GetAssembly(typeof(MapProfile));
 
             builder.RegisterAssemblyTypes(apiAssembly, repoAssembly, serviceAssembly).Where(x => x.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerLifetimeScope();

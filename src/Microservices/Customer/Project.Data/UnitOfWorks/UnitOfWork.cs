@@ -4,9 +4,9 @@ namespace Project.Data.UnitOfWorks
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly AppDbContext _context;
+        private readonly DatabaseContext _context;
 
-        public UnitOfWork(AppDbContext context)
+        public UnitOfWork(DatabaseContext context)
         {
             _context = context;
         }

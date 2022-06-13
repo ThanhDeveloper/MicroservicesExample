@@ -14,6 +14,8 @@ namespace Project.Service.Mapping
         public MapProfile() 
         {
             CreateMap<Customer, CustomerDto>().ReverseMap();
+            CreateMap<CustomerCreateDto, Customer >();
+            CreateMap<CustomerUpdateDto, Customer>();
         }
     }
 }

@@ -26,11 +26,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped(typeof(NotFoundFilter<>));
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
-builder.Services.AddDbContext<AppDbContext>(x =>
+builder.Services.AddDbContext<DatabaseContext>(x =>
 {
     x.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"), option =>
     {
-        option.MigrationsAssembly(Assembly.GetAssembly(typeof(AppDbContext)).GetName().Name);
+        option.MigrationsAssembly(Assembly.GetAssembly(typeof(DatabaseContext)).GetName().Name);
     });
 });
 
