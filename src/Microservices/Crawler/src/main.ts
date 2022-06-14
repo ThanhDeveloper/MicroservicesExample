@@ -10,6 +10,6 @@ async function bootstrap() {
     setupSwagger(app);
   }
   app.useGlobalPipes(new ValidateAuthMiddleware());
-  await app.listen(5001);
+  await app.listen(44302);
 }
 bootstrap();

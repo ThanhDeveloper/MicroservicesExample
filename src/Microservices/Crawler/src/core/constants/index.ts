@@ -1,5 +1,5 @@
 //base version API
-export const API_VERSION = 'api/v1/';
+export const API_VERSION = 'api/';
 
 //sequelize
 export const SEQUELIZE = 'SEQUELIZE';
