@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/consumers",
+      "DownstreamPathTemplate": "/api/customers",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,11 +9,11 @@
           "Port": 44301
         }
       ],
-      "UpstreamPathTemplate": "/gateway/consumers",
+      "UpstreamPathTemplate": "/gateway/customers",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/customer/{id}",
+      "DownstreamPathTemplate": "/api/customers/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -25,28 +25,40 @@
       "UpstreamHttpMethod": [ "GET", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/api/products",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/projects",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 44302
         }
       ],
-      "UpstreamPathTemplate": "/gateway/products",
+      "UpstreamPathTemplate": "/gateway/projects",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/product/{id}",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/projects/{id}",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 44302
         }
       ],
-      "UpstreamPathTemplate": "/gateway/products/{id}",
+      "UpstreamPathTemplate": "/gateway/projects/{id}",
       "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/orders",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44303
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/orders",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     }
   ],
   "GlobalConfiguration": {
